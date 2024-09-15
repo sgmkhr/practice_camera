@@ -1,24 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="practice_camera" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pv5-NT-eFI">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9b-YN-b6U">
+                                <rect key="frame" x="0.0" y="774" width="393" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="Y8q-Sn-LhS">
+                                        <connections>
+                                            <action selector="launchCamera:" destination="BYZ-38-t0r" id="QsY-LZ-zFN"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="r9b-YN-b6U" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="715" id="1dO-yM-3p2"/>
+                            <constraint firstItem="Pv5-NT-eFI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9WW-XI-0sy"/>
+                            <constraint firstItem="Pv5-NT-eFI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ABX-gZ-ydI"/>
+                            <constraint firstItem="Pv5-NT-eFI" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-59" id="IK8-x2-fYY"/>
+                            <constraint firstItem="r9b-YN-b6U" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Pee-7T-uUR"/>
+                            <constraint firstItem="Pv5-NT-eFI" firstAttribute="leading" secondItem="r9b-YN-b6U" secondAttribute="leading" id="ZzY-3z-kgz"/>
+                            <constraint firstItem="r9b-YN-b6U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nKM-x4-IMM"/>
+                            <constraint firstItem="Pv5-NT-eFI" firstAttribute="trailing" secondItem="r9b-YN-b6U" secondAttribute="trailing" id="oHu-oW-r3c"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="Pv5-NT-eFI" id="zWJ-fH-LIX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="119.84732824427481" y="3.5211267605633805"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
